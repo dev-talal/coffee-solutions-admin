@@ -1,0 +1,191 @@
+@media (min-width: 768px) {
+  .menu00:before {
+    content: '';
+    width: 0%;
+    height: 115px;
+    background-repeat: no-repeat no-repeat;
+    background-position: center right -1px;
+    background-size: cover;
+    position: absolute;
+    transition: 0.2s width ease-in-out;
+  }
+
+  .dark .menu00:before {
+    background-image: url("data:image/svg+xml, %3Csvg width='273' height='130' viewBox='0 0 273 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M272.806 7.19033L273 0V130L272.765 120.802C272.339 104.147 258.715 90.8664 242.055 90.8664H26.871C12.0305 90.8664 0 78.8358 0 63.9954C0 49.155 12.0305 37.1244 26.871 37.1244H242.055C258.722 37.1244 272.358 23.8513 272.806 7.19033Z' fill='%230a0a0a'/%3E%3C/svg%3E%0A");
+  }
+
+  .light .menu00:before {
+    background-image: url("data:image/svg+xml, %3Csvg width='273' height='130' viewBox='0 0 273 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M272.806 7.19033L273 0V130L272.765 120.802C272.339 104.147 258.715 90.8664 242.055 90.8664H26.871C12.0305 90.8664 0 78.8358 0 63.9954C0 49.155 12.0305 37.1244 26.871 37.1244H242.055C258.722 37.1244 272.358 23.8513 272.806 7.19033Z' fill='%23EFEAE7'/%3E%3C/svg%3E%0A");
+  }
+
+  .sidebar-menu-item {
+    position: relative;
+  }
+
+  .menu00:hover:before,
+  .menu00.active:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .dark .menu00:hover,
+  .dark .menu00.active {
+    color: var(--color-foreground);
+  }
+
+  .dark .login-logo {
+    filter: brightness(0) invert(1);
+  }
+  [dir='rtl'] .menu00::before,
+  [dir='rtl'] .menu00.active::before {
+    transform: scaleX(-1);
+    /* border-left: none; */
+    left: 0;
+  }
+  [dir='rtl'] .menu00::before {
+    transform: scaleX(-1);
+    /* border-left: none; */
+    left: 0;
+  }
+  [dir='ltr'] .menu00::before {
+    /* border-left: none; */
+    right: 0;
+  }
+  [dir='ltr'] .menu00:hover::before,
+  [dir='ltr'] .menu00.active::before {
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu00.active,
+  .menu00:hover {
+    background: var(--color-accent);
+  }
+  .dark .menu00.active,
+  .dark .menu00:hover {
+    color: var(--color-sidebar-foreground);
+  }
+}
+
+.inbox-users [data-slot='sidebar-container'] {
+  height: 100%;
+}
+
+.react-pdf__Page__canvas {
+  margin-inline: auto;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes DrawCheck {
+  0% {
+    width: 0px;
+    height: 18px;
+    opacity: 0;
+  }
+  100% {
+    width: 40px;
+    height: 18px;
+    opacity: 1;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+.dark .skeleton-shimmer {
+  background: linear-gradient(90deg, #444444 12.5%, #666666 25%, #444444 37.5%);
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+.react-international-phone-input-container {
+  gap: 6px;
+}
+
+.react-international-phone-input {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 9999px;
+
+  input {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+}
+.dark .react-international-phone-input-container .react-international-phone-input {
+  color: white !important;
+}
+
+.react-international-phone-country-selector-button {
+  border: none;
+  background: transparent;
+}
+
+.react-international-phone-country-selector-dropdown {
+  background-color: #fff;
+  max-width: 15rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: #000;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.react-international-phone-country-selector-dropdown {
+  color: #000;
+}
+
+/* Dark Mode Styles */
+.dark .react-international-phone-country-selector-dropdown {
+  background-color: #212121;
+  color: #fff;
+}
+
+.dark
+  .react-international-phone-country-selector-dropdown
+  .react-international-phone-country-selector-dropdown__list-item {
+  background-color: rgba(33, 33, 33, 1);
+  color: #fff;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dark .react-international-phone-country-selector-dropdown {
+  background-color: rgba(33, 33, 33, 0.6);
+  color: #fff;
+}
+
+.react-international-phone-country-selector-button:hover {
+  background-color: transparent;
+}
+
+.animate-draw-check {
+  animation: DrawCheck 0.5s ease-out forwards;
+}
